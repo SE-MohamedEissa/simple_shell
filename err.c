@@ -14,7 +14,7 @@ void _eputs(char *s)
 		return;
 	while (s[i] != '\0')
 	{
-		_erputchar(s[i]);
+		_eputchar(s[i]);
 		i++;
 	}
 }

@@ -9,13 +9,13 @@
  */
 void pr_error(inf_type *info, char *estr)
 {
-	_erputs(info->finame);
-	_erputs(": ");
+	_eputs(info->finame);
+	_eputs(": ");
 	pr_d(info->line_count, STDERR_FILENO);
-	_erputs(": ");
-	_erputs(info->argv[0]);
-	_erputs(": ");
-	_erputs(estr);
+	_eputs(": ");
+	_eputs(info->argv[0]);
+	_eputs(": ");
+	_eputs(estr);
 }
 
 /**

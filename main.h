@@ -115,7 +115,7 @@ char *dup_ch(char *, int, int);
 char *fnd_path(inf_type *, char *, char *);
 
 /* err.c */
-void _erputs(char *);
+void _eputs(char *);
 int _eputchar(char);
 int _eputfd(char v, int fd);
 int _eputsfd(char *str, int fd);
