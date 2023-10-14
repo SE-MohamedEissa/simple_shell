@@ -46,7 +46,7 @@ int write_his(inf_type *inf)
 		_eputfd('\n', fid);
 	}
 	_eputfd(BUF_FLUSH, fid);
-	close(fd);
+	close(fid);
 	return (1);
 }
 

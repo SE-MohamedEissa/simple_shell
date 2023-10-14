@@ -7,7 +7,7 @@
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
-void pr_error(inf_t *info, char *estr)
+void pr_error(inf_type *info, char *estr)
 {
 	_erputs(info->finame);
 	_erputs(": ");
@@ -71,13 +71,13 @@ char *conv_number(long int num, int base, int flags)
 	char *ptr;
 	unsigned long n = num;
 
-	if (!(flags & CONVERT_UNSIGNED) && num < 0)
+	if (!(flags & CONV_UNSIGNED) && num < 0)
 	{
 		n = -num;
 		sign = '-';
 	}
 
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	array = flags & CONV_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 

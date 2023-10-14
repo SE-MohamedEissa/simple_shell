@@ -5,7 +5,7 @@
  * @info: the structure
  * Return: 1, 0 otherwise
  */
-int interactives(inf_t *info)
+int interactives(inf_type *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
 }

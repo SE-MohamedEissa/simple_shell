@@ -85,7 +85,7 @@ size_t pr_lst_str(const list_type *hd)
 
 	while (hd)
 	{
-		_puts(h->str ? h->str : "(nil)");
+		_puts(hd->str ? hd->str : "(nil)");
 		_puts("\n");
 		hd = hd->next;
 		i++;
@@ -154,5 +154,5 @@ void fre_lst(list_type **hd_ptr)
 		free(node);
 		node = next_node;
 	}
-	*head_ptr = NULL;
+	*hd_ptr = NULL;
 }

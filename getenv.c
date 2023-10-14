@@ -67,7 +67,7 @@ int _setsenv(inf_type *inf, char *var, char *val)
 	_strcpy(buf, var);
 	_strcat(buf, "=");
 	_strcat(buf, val);
-	node = info->env;
+	node = inf->env;
 	while (node)
 	{
 		p = sta_with(node->str, var);
@@ -75,7 +75,7 @@ int _setsenv(inf_type *inf, char *var, char *val)
 		{
 			free(node->str);
 			node->str = buf;
-			info->env_changed = 1;
+			inf->env_changed = 1;
 			return (0);
 		}
 		node = node->next;

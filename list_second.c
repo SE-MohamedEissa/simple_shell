@@ -29,7 +29,7 @@ size_t lst_len(const list_type *hd)
 char **lst_tostrs(list_type *hd)
 {
 	list_type *node = hd;
-	size_t i = lst_len(head), j;
+	size_t i = lst_len(hd), j;
 	char **str1;
 	char *str;
 

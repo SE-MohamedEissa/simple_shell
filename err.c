@@ -29,7 +29,7 @@ void _eputs(char *s)
 int _eputchar(char c)
 {
 	static int i;
-	static char buf[WRITE_BUF_SIZE];
+	static char buf[BUF_SIZE];
 
 	if (c == BUF_FLUSH || i >= BUF_SIZE)
 	{
@@ -54,7 +54,7 @@ int _eputchar(char c)
 int _eputfd(char v, int fd)
 {
 	static int i;
-	static char buf[WRITE_BUF_SIZE];
+	static char buf[BUF_SIZE];
 
 	if (v == BUF_FLUSH || i >= BUF_SIZE)
 	{
@@ -82,7 +82,7 @@ int _eputsfd(char *s, int f)
 		return (0);
 	while (*s)
 	{
-		i += _eputfd(*s++, fd);
+		i += _eputfd(*s++, f);
 	}
 
 	return (i);

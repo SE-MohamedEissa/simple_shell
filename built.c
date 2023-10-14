@@ -69,7 +69,7 @@ int _minecd(inf_type *info)
 	else
 	{
 		_setsenv(info, "OLDPWD", _getsenv(info, "PWD="));
-		_setsenv(info, "PWD", getcwd(buffer, 1024));
+		_setsenv(info, "PWD", getcwd(buf, 1024));
 	}
 	return (0);
 }

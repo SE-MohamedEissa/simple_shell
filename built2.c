@@ -45,9 +45,9 @@ int sets_alias(inf_type *info, char *s)
 	if (!q)
 		return (1);
 	if (!*++q)
-		return (unsets_alias(info, str));
-	unsets_alias(info, str);
-	return (add_node_end(&(info->alias), str, 0) == NULL);
+		return (unsets_alias(info, s));
+	unsets_alias(info, s);
+	return (add_node_end(&(info->alias), s, 0) == NULL);
 }
 
 /**
